@@ -30,16 +30,111 @@
 
 ### 노드 진도
 --------------------------------------------
-노드 1주차 : 1~2장 진행.
+**3주차 : 노드 개념 익히기(4월 1일)**
 
-노드 2주차 : 3장 진행. 
+<details>
+<summary>Node js 1강 공부</summary>
+<div markdown="1">
 
-노드 3주차 : 4~5장 진행.
+- 서버
+- 자바스크립트 런타임
+- 이벤트 기반
+- 논 블로킹 I/O
+- 싱글 스레드
+- 2장은 개인공부 
+</div>
+</details>
+<br>
 
-노드 4주차 : 6장진행
+**4주차 : 노드 기본 익히기(4월 29일)**
+<details>
+<summary>노드 기능(Nodejs교과서3강)공부</summary>
+<div markdown="1">
+  
+- REPL
+- JS 파일 실행
+- 모듈 만들기
+- 내장 객체 공부
+- 내장 모듈 사용하기
 
-노드 5주차 : 7장 or 8장 진행
+</div>
+</details>
+<details>
+<summary>패키지 매니저</summary>
+<div markdown="1">
+  
+- npm
+- package.json
+- 패키지 버전 이해
+- JS 파일 실행
 
+</div>  
+</details>  
+<br>
+
+**5주차 : http모듈로 서버 구현-> Express 사용(날짜 미정)**
+<details>
+<summary>Nodejs교과서 4장</summary>
+<div markdown="1">
+  
+- 요청 응답
+- RSET, 라우팅
+- 쿠키 세션
+- cluster
+
+</div>
+</details>
+<details>
+<summary>Nodejs 교과서  6장</summary>
+<div markdown="1">
+  
+- Express 개념
+- 자주 쓰는 미들웨어
+- 라우터
+- req,res 객체
+
+</div>  
+</details>  
+<br>
+
+**6주차: DB, ORM(날짜 미정)**
+<details>
+<summary>Nodejs교과서 7장</summary>
+<div markdown="1">
+  
+- MySQL 설치
+- 워크벤치 or DataGrip
+- 데이터베이스 및 테이블 생성
+- CRUD 작업
+- 시퀄라이즈 이용
+
+</div>
+</details>
+<br>
+
+**7주차 : API Todo-list 만들기(날짜 미정)**
+<details>
+<summary>Todo-list</summary>
+<div markdown="1">
+  
+- 기능 구체화
+- list 목록 가져오기
+- list 작성하기
+- list 수정하기
+- list 삭제하기
+- 시퀄라이즈 적용
+
+</div>
+</details>
+<br>
+
+**8주차 : 사용자 인증(passport, jwt) (날짜미정)**
+- local login
+- OAuth
+- Todo-list 사용자 추가
+<br>
+
+**9주차 : **
 
 ### 스터디 기록
 --------------------------------------------------
@@ -48,3 +143,5 @@
 |2021/03/14| 총원 6 현재원 6| 회의 |
 |2021/03/19| 총원 6 현재원 6| 스터디 1차 |
 |2021/03/28| 총원 6 현재원 6| 스터디 2차 |
+|2021/04/01| 총원 6 현재원 6| 스터디 3차 |
+
