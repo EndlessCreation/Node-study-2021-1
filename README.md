@@ -72,7 +72,7 @@
 </details>  
 <br>
 
-**5주차 : http모듈로 서버 구현-> Express 사용(날짜 미정)**
+~~**5주차 : http모듈로 서버 구현-> Express 사용(날짜 미정)**~~
 <details>
 <summary>Nodejs교과서 4장</summary>
 <div markdown="1">
@@ -97,7 +97,7 @@
 </details>  
 <br>
 
-**6주차: DB, ORM(날짜 미정)**
+**6주차: DB, ORM(21-05-10)**
 <details>
 <summary>Nodejs교과서 7장</summary>
 <div markdown="1">
@@ -112,7 +112,7 @@
 </details>
 <br>
 
-**7주차 : API Todo-list 만들기(날짜 미정)**
+**7주차 : API Todo-list 만들기(21-05-13)**
 <details>
 <summary>Todo-list</summary>
 <div markdown="1">
