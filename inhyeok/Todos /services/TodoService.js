@@ -39,7 +39,7 @@ export const CreateTodo = async (req, res, next) => {
   }
   try {
     const response = await TodoRepository.create(todo, writer);
-    if (response) {
+    if (!response) {
       return res
         .status(statusCode.BAD_REQUEST)
         .send(utils.fail(statusCode.BAD_REQUEST, "등록 실패."));
@@ -60,7 +60,7 @@ export const Completed = async (req, res, next) => {
       req.params.id,
       completed
     );
-    if (response) {
+    if (!response) {
       return res
         .status(statusCode.BAD_REQUEST)
         .send(utils.fail(statusCode.BAD_REQUEST, "수정 실패."));
@@ -77,7 +77,7 @@ export const Completed = async (req, res, next) => {
 export const Deleted = async (req, res, next) => {
   try {
     const response = await TodoRepository.deleteTodo(req.params.id);
-    if (response) {
+    if (!response) {
       return res
         .status(statusCode.BAD_REQUEST)
         .send(utils.fail(statusCode.BAD_REQUEST, "삭제 실패."));
