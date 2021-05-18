@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./jsjs.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrapper">
+		<!--List of uncompleted tasks -->
+		<ul id="todo">
+
+			<li> Tick to complete
+				<div class="buttons">
+					<button class="remove"></button>
+					<button class="complete"></button>
+				</div>
+			</li>
+			<li> Delete me
+				<div class="buttons">
+					<button class="remove"></button>
+					<button class="complete"></button>
+				</div>
+			</li>
+
+		</ul>
+
+		<!-- List of Completed tasks -->
+		<ul id="ready">
+
+			<li> Tick to repeat
+				<div class="buttons">
+					<button class="remove"></button>
+					<button class="complete"></button>
+				</div>
+			</li>
+			<li> Or remove me!
+				<div class="buttons">
+					<button class="remove"></button>
+					<button class="complete"></button>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+
+	<!-- just to decorate -->
+	<div id="fini"></div>
+
+</div>
+</body>
+</html>
+<div id="app">
+	<header>
+		<h1>Daily ToDo</h1>
+		<input type="text" name="text" placeholder="What is your mission?" id="text">
+		<button id="new">+</button>
+	</header>
+
