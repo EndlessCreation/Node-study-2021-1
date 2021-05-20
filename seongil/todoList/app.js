@@ -4,7 +4,7 @@ const { sequelize } = require("./models");
 require("dotenv").config();
 
 sequelize
-   .sync({ force: false }) // 서버 실행 시 mysql 연결. force:true 일 경우, 서버 실행 시 마다 테이블을 재생성함. 테이블을 잘못만든 경우 true로 설정
+   .sync({ force: true }) // 서버 실행 시 mysql 연결. force:true 일 경우, 서버 실행 시 마다 테이블을 재생성함. 테이블을 잘못만든 경우 true로 설정
    .then(() => {
       console.log("데이터베이스 연결 성공");
    })

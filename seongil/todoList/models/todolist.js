@@ -31,5 +31,10 @@ module.exports = class Todolist extends Sequelize.Model {
          }
       );
    }
-   static associate(db) {}
+   static associate(db) {
+      db.Todolist.belongsTo(db.User, {
+         foreignKey: "username",
+         targetKey: "username",
+      });
+   }
 };

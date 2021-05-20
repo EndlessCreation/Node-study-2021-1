@@ -1,11 +1,19 @@
 const express = require("express");
 const { Todolist } = require("../models");
+const cookie = require("cookie");
+const authMiddleware = require("../middlewares/auth");
 
 const router = express.Router();
 require("dotenv").config();
+router.use(authMiddleware);
 
 router.get("/", async (req, res) => {
-   await Todolist.findAll({})
+   const { username } = req.decoded;
+   await Todolist.findAll({
+      where: {
+         username: username,
+      },
+   })
       .then((data) => {
          res.send({
             status: 200,
@@ -24,7 +32,8 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-   await Todolist.create(req.body)
+   const { username } = req.decoded;
+   await Todolist.create({ ...req.body, username: username })
       .then(() => {
          res.send({
             status: 201,
@@ -56,8 +65,9 @@ router.post("/", async (req, res) => {
 });
 
 router.delete("/:id", async (req, res) => {
+   const { username } = req.decoded;
    await Todolist.destroy({
-      where: { id: req.params.id },
+      where: { id: req.params.id, username: username },
    })
       .then((data) => {
          if (data === 0) {
@@ -92,7 +102,10 @@ router.put("/", async (req, res) => {
       });
    }
 
-   await Todolist.update(req.body, { where: { id: req.body.id } })
+   const { username } = req.decoded;
+   await Todolist.update(req.body, {
+      where: { id: req.body.id, username: username },
+   })
       .then((data) => {
          if (data[0] === 0) {
             res.send({
