@@ -134,7 +134,7 @@
 - Todo-list 사용자 추가
 <br>
 
-**9주차 : todolist, auth 시연  (21-05-27) **
+**9주차 : todolist, auth 시연 (21-05-27)**
  - 시연
 <br>
 
