@@ -2,21 +2,31 @@
 /* GET /에서도 사용자 데이터를 조회했지만, GET /users에서는 데이터를 JSON 형식으로 반환한다는 것에 차이가 있습니다.*/
 
 const express = require('express');
-const Todo = require('../models/todo');
+const {Todo} = require('../models');
 
 const router = express.Router();
+require("dotenv").config();
 
-router.route('/')
-  .get(async (req, res, next) => {
-    try {
-      const todos = await Todo.findAll();
-      res.json(todos);
-    } catch (err) {
-      console.error(err);
-      next(err);
-    }
-  })
-  .post(async (req, res, next) => {
+router.get("/", async (req, res) => {
+  await Todo.findAll()
+     .then((data) => {
+        res.send({
+           status: 200,
+           success: true,
+           message: "todolist 조회 성공",
+           data: data,
+        });
+     })
+     .catch(() => {
+        res.send({
+           status: 500,
+           success: false,
+           message: "todolist 조회 실패",
+        });
+     });
+});
+
+  router.post(async (req, res, next) => {
     try {
       const todos = await Todo.create({
         todo_content: req.body.todo_content,

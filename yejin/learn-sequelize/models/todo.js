@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 // User 모델을 만들고 모듈로 exports했습니다. User 모델은 Sequelize.Model을 확장한 클래스로 선언합니다. 
-module.exports = class User extends Sequelize.Model {
+module.exports = class Todo extends Sequelize.Model {
     //init 메서드에는 테이블에 대한 설정
   static init(sequelize) {
     // super.init 메서드의 첫 번째 인수가 테이블 컬럼에 대한 설정이고, 두 번째 인수가 테이블 자체에 대한 설정 (테이블 옵션)
@@ -30,7 +30,7 @@ module.exports = class User extends Sequelize.Model {
       timestamps: false,
       underscored: false,
       modelName: 'Todo',
-      tableName: 'todoss',
+      tableName: 'todo',
       paranoid: false,
       charset: 'utf8',
       collate: 'utf8_general_ci',
