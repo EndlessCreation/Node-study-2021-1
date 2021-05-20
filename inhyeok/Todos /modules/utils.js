@@ -1,9 +1,14 @@
 export default {
-  success: (status, message, data) => ({
+  successData: (status, message, data) => ({
     status,
     success: true,
     message,
     data,
+  }),
+  success: (status, message) => ({
+    status,
+    success: true,
+    message,
   }),
   fail: (status, message) => ({
     status,

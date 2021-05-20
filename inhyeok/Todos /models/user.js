@@ -14,7 +14,7 @@ export default class User extends Sequelize.Model {
           unique: true,
         },
         password: {
-          type: Sequelize.STRING(20),
+          type: Sequelize.STRING(100),
           allowNull: true,
         },
         provider: {

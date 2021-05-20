@@ -8,7 +8,7 @@ export const Todolist = async (req, res, next) => {
 
     res
       .status(statusCode.OK)
-      .send(utils.success(statusCode.OK, "전체 todos", Todos));
+      .send(utils.successData(statusCode.OK, "전체 todos", Todos));
   } catch (err) {
     console.error(err);
     next(err);
@@ -22,7 +22,7 @@ export const UserTodolist = async (req, res, next) => {
 
     res
       .status(statusCode.OK)
-      .send(utils.success(statusCode.OK, "사용자 todos", Todos));
+      .send(utils.successData(statusCode.OK, "사용자 todos", Todos));
   } catch (err) {
     console.error(err);
     next(err);
@@ -46,7 +46,7 @@ export const CreateTodo = async (req, res, next) => {
     }
     res
       .status(statusCode.OK)
-      .send(utils.success(statusCode.OK, "등록 성공", response));
+      .send(utils.successData(statusCode.OK, "등록 성공", response));
   } catch (err) {
     console.error(err);
     next(err);
@@ -67,7 +67,7 @@ export const Completed = async (req, res, next) => {
     }
     res
       .status(statusCode.OK)
-      .send(utils.success(statusCode.OK, "수정 성공", response));
+      .send(utils.successData(statusCode.OK, "수정 성공", response));
   } catch (err) {
     console.error(err);
     next(err);
@@ -84,7 +84,7 @@ export const Deleted = async (req, res, next) => {
     }
     res
       .status(statusCode.OK)
-      .send(utils.success(statusCode.OK, "삭제 성공", response));
+      .send(utils.successData(statusCode.OK, "삭제 성공", response));
   } catch (err) {
     console.error(err);
     next(err);
