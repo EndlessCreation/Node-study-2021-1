@@ -8,10 +8,10 @@ module.exports = class Todo extends Sequelize.Model {
     // 시퀄라이즈는 알아서 id를 기본 키로 연결하므로 id 컬럼은 적어줄 필요가 없다.
     // 나머지 컬럼의 스펙을 입력합니다. MySQL 테이블과 컬럼 내용이 일치해야 정확하게 대응됩니다.
     return super.init({
-      todo_idx: {
+      id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        unique: true,
+        autoIncrement: true,
+        primaryKey: true,
       },
       todo_content: {
         type: Sequelize.TEXT,
