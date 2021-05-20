@@ -1,8 +1,14 @@
 const express = require("express");
 const morgan = require("morgan");
 const { sequelize } = require("./models");
+import session from "express-session";
+import passport from "passport";
+import passportConfig from "./config/passport";
 import env from "./config";
 import TodoController from "./controllers/TodoController";
+import AuthController from "./controllers/AuthController";
+
+passportConfig(passport);
 
 const app = express();
 app.set("port", env.PORT || 3001);
@@ -18,7 +24,18 @@ sequelize
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(
+  session({
+    secret: env.COOKIE_SECRET,
+    resave: false,
+    saveUninitialized: true, // saveUnintialized: resave와 비슷함. true로 세팅될 경우, 세션이 초기화되지 않은 경우에도 세션이 강제로 저장됨.
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use("/todos", TodoController);
+app.use("/auth", AuthController);
 
 app.use((req, res, next) => {
   const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
