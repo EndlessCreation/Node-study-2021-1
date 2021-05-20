@@ -1,0 +1,14 @@
+{
+    "name": "learn-sequelize",
+    "version": "0.0.1",
+    "description": "시퀄라이즈를 배우자",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app"
+    },
+    "author": "ZeroCho",
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^9.0.2"
+    }
+}
